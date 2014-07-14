@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+    <!-- <appender name="FileAppender" class="com.volvocars.common.log4j.DynamicFileAppender">
+        <param name="File" value="logs/order.log"/>
+        <param name="MaxBackup" value="10"/>
+        <param name="Append" value="true"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %-5p %X{userId} %-30c{1} %m%n"/>
+        </layout>
+    </appender> -->    
+    <appender name="ConsoleAppender" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p %-30c{1} %m%n"/>
+        </layout>
+    </appender>
+    
+<!--     <category name="webwork">
+        <priority value="ERROR"/>
+    </category>
+     -->
+    
+    <!-- <category name="webwork.config.DefaultConfiguration">
+        <priority value="FATAL"/>
+    </category> -->
+
+    <root>
+        <priority value="ERROR"/>
+        <!-- <appender-ref ref="FileAppender"/> -->
+        <appender-ref ref="ConsoleAppender"/>        
+    </root>
+</log4j:configuration>

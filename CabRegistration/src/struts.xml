@@ -1,0 +1,21 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="default" extends="struts-default" >
+        <action name="index" class="com.application.IndexAction" method="execute">
+            <result name="SUCCESS">/index.jsp</result>
+        </action>
+        <action name="EmployeeRegistration" class="com.application.EmployeeRegistrationAction">
+            <result name="SUCCESS">/employee_data_entry.jsp</result>
+            <result name="ERROR">/error.jsp</result>
+            <result name="input">/employee_data_entry.jsp</result>
+        </action>
+        <action name="EmployeeDataViewer" class="com.application.EmployeeDataViewerAction">
+            <result name="SUCCESS">/employee_data_result.jsp</result>
+            <result name="ERROR">/error.jsp</result>
+            <result name="input">/employee_data_view.jsp</result>
+        </action>
+    </package>
+</struts>
